@@ -11,12 +11,12 @@ export default function App() {
 
   return (
     <div className="App">
-      {isLoaded && <p>cargando..</p>}
+      {isLoaded ? <p>cargando..</p> : null}
       <h1>Hello CodeSandbox</h1>
       {data?.map((item) => (
         <p key={item.id}>{item.body}</p>
       ))}
-      {error && <p>Algo trono ama!!</p>}
+      {error ? <p>Algo trono ama!!</p> : null}
     </div>
   );
 }
